@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mini Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <main class="app-container">
+      <header class="app-header">
+        <p class="course-label">JavaScript Midterm</p>
+        <h1>Mini Expense Tracker</h1>
+
+        <p class="app-description">
+          Enter your expenses and keep track of your spending.
+        </p>
+      </header>
+
+      <section class="expense-form">
+        <h2>Add Expense</h2>
+
+        <div class="form-group">
+          <label for="description"> Description </label>
+
+          <input type="text" id="description" placeholder="Example: Coffee" />
+        </div>
+
+        <div class="form-group">
+          <label for="amount"> Amount </label>
+
+          <input
+            type="number"
+            id="amount"
+            placeholder="Example: 5.25"
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="category"> Category </label>
+
+          <select id="category">
+            <option value="Food">Food</option>
+
+            <option value="Transportation">Transportation</option>
+
+            <option value="School">School</option>
+
+            <option value="Entertainment">Entertainment</option>
+
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="button-group">
+          <button id="add-expense" class="btn btn-primary">Add Expense</button>
+
+          <button id="reset" class="btn btn-secondary">Reset</button>
+        </div>
+
+        <p id="message" class="message"></p>
+      </section>
+
+      <section class="expense-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Expense History</p>
+
+            <h2>Expenses</h2>
+          </div>
+
+          <span id="expense-count" class="expense-count"> 0 Expenses </span>
+        </div>
+
+        <div id="expense-list" class="expense-list">
+          <p class="empty-message">No expenses have been added yet.</p>
+        </div>
+      </section>
+
+      <section class="summary">
+        <div class="summary-card">
+          <p>Total Expenses</p>
+
+          <h2 id="total">$0.00</h2>
+        </div>
+
+        <div class="summary-card">
+          <p>Budget</p>
+
+          <h2>$500.00</h2>
+        </div>
+      </section>
+
+      <section class="budget-section">
+        <p class="budget-label">Budget Status</p>
+
+        <p id="budget-status" class="budget-status under-budget">
+          You are under budget.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
